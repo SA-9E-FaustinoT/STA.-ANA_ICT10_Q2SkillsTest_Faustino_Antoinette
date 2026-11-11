@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- PyScript -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+    <title>Skills Test - 2nd Quarter</title>
+     <!-- Because we wanna be extra, we will use internal css! -->
+    <style>
+        /* Haikyuu Background! */
+        body{
+            background-image: url('https://images7.alphacoders.com/139/thumb-1920-1393364.jpg');
+            background-size: cover;
+            min-height:100vh;
+        }
+        /* Card styling with transparency because we wanna see the haikyuu characters! */
+        .card{
+            border: 5px dashed #ff393933;
+            border-radius:20px;
+            background: rgba(255, 255, 255, 0.30) !important;
+            backdrop-filter: blur(8px);
+        }
+        /* Card header styling */
+        .card-header{
+            border-radius:20px 20px 0 0 !important;
+        }
+        /* Results called check information description */
+        #result{
+            border:none;
+            border-radius:20px;
+            background-color: rgba(255, 255, 255, 0.30) !important;
+            backdrop-filter: blur(5px);
+        }
+        /* Very simple footer styling */
+        .footer-text{
+            font-size:0.9rem;
+            color:#ff3939;;
+        }
+        /* Button transition when site is at defult */
+        .btn-danger {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        /* Button animation when mouse hovers */
+        .btn-danger:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+        }
+        /* Button animation when mouse clicks */
+        .btn-danger:active {
+            transform: scale(0.96);
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-7 col-md-9">
+
+            <div class="card shadow-lg">
+
+                <div class="card-header bg-danger text-white text-center p-4">
+
+                    <h2>
+                        <i class="bi bi-flask-fill"></i>
+                        <b>VOLLEYBALL POSITIONS🏐✨</b>
+                    </h2>
+
+                    <p class="mb-0">
+                        Volleyball Positions Information Filler
+                    </p>
+
+                </div>
+
+                <div class="card-body p-4">
+
+                    <div class="alert alert-danger">
+                        <strong>Instructions:</strong><br>
+                        Enter the <b>position</b> of a volleyball player
+                        (Example: Setter, Outside Hitter, Middle Blocker, Libero, Opposite).
+                    </div>
+
+                    <form>
+
+                        <div class="mb-3">
+
+                            <label class="form-label fw-bold">
+                                <i class="bi bi-search"></i>
+                                Position
+                            </label>
+
+                            <input
+                                type="text"
+                                id="element_name"
+                                class="form-control form-control-lg"
+                                placeholder="Enter the position here">
+
+                        </div>
+
+                        <div class="d-grid">
+
+                            <input
+                                type="button"
+                                py-click="element_checker"
+                                value="Check Information"
+                                class="btn btn-danger btn-lg">
+
+                        </div>
+
+                    </form>
+
+                    <hr>
+
+                    <h5 class="text-danger fw-bold">
+                        <i class="bi bi-card-list"></i>
+                        Description
+                    </h5>
+
+                    <div id="result" class="rounded p-3 shadow-sm">
+
+                    </div>
+
+                </div>
+
+                <div class="card-footer bg-light text-center footer-text">
+
+                    <i class="bi bi-lightbulb-fill text-warning"></i>
+                    Skills Test • 2nd Quarter • Antoinette Claire Inguillo Faustino 10-Emerald
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<py-script src="main.py"></py-script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
